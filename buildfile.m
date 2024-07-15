@@ -12,7 +12,7 @@ disp test
 end
 
 function packageTask(~)
-disp package
+error('fail!')
 end
 
 function deployTask(~)
