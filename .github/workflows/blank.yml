@@ -31,6 +31,6 @@ jobs:
           cache: true
 
       - name: Run MATLAB Build
-        uses: matlab-actions/run-build@v2
+        uses: matlab-actions/run-build@v2.1
           
           
