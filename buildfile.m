@@ -4,7 +4,7 @@ plan.DefaultTasks = ["check","test","package"];
 end
 
 function checkTask(~)
-disp check
+toolboxdir("matlab")
 end
 
 function testTask(~)
