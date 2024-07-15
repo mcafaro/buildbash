@@ -1,9 +1,20 @@
 function plan = buildfile
-import matlab.buildtool.*;
+plan = buildplan(localfunctions);
+plan.DefaultTasks = ["check","test","package"];
+end
 
-plan = buildplan;
+function checkTask(~)
+disp check
+end
 
-plan("test") = Task(Actions=@(~)disp('hello'));
+function testTask(~)
+disp test
+end
 
-plan.DefaultTasks = "test";
+function packageTask(~)
+disp package
+end
+
+function deployTask(~)
+disp deploy
 end
