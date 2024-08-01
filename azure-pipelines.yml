@@ -10,5 +10,9 @@ pool:
   name: mark-temp
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: InstallMATLAB@1
+- task: RunMATLABCommand@1
+  inputs:
+    command: 'disp(''hello world'')'
+  env:
+    MLM_LICENSE_TOKEN: $(myToken)
