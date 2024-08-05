@@ -1,5 +1,6 @@
 function plan = buildfile
 plan = buildplan(localfunctions);
+plan("package").Inputs = "README.md";
 plan.DefaultTasks = ["check","test","package"];
 end
 
@@ -12,7 +13,7 @@ disp test
 end
 
 function packageTask(~)
-error('fail!')
+disp package
 end
 
 function deployTask(~)
